@@ -68,6 +68,9 @@ public class ClockWidgetProvider extends AppWidgetProvider {
             // Subsequent boots will use cached data
             WeatherUpdateService.scheduleNextUpdate(context, true);
 
+            //Since we're using elapsed time since boot, we can't use the timestamp from the
+            //previous boot so we need to reset the timer
+            Preferences.setLastWeatherUpdateTimestamp(context, 0);
         // A widget has been deleted, prevent our handling and ask the super class handle it
         } else if (AppWidgetManager.ACTION_APPWIDGET_DELETED.equals(action)
                 || AppWidgetManager.ACTION_APPWIDGET_DISABLED.equals(action)) {
