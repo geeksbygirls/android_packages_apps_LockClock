@@ -94,7 +94,19 @@ public class IconSelectionPreference extends DialogPreference implements
         new IconSetDescriptor("mono", R.string.weather_icons_monochrome,
                 R.drawable.weather_28),
         new IconSetDescriptor("vclouds", R.string.weather_icons_vclouds,
-                R.drawable.weather_vclouds_28)
+                R.drawable.weather_vclouds_28),
+        new IconSetDescriptor("magical", R.string.weather_icons_magical,
+                R.drawable.weather_magical_28),
+        new IconSetDescriptor("tapas", R.string.weather_icons_tapas,
+                R.drawable.weather_tapas_28),
+        new IconSetDescriptor("sthul", R.string.weather_icons_sthul,
+                R.drawable.weather_sthul_28),
+        new IconSetDescriptor("miui", R.string.weather_icons_miui,
+                R.drawable.weather_miui_28),
+        new IconSetDescriptor("gnw", R.string.weather_icons_gnw,
+                R.drawable.weather_gnw_28),
+        new IconSetDescriptor("gs6", R.string.weather_icons_gs6,
+                R.drawable.weather_gs6_28)
     };
 
     private static final IntentFilter PACKAGE_CHANGE_FILTER = new IntentFilter();
