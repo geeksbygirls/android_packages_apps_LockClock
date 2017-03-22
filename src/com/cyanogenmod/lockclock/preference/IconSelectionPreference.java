@@ -106,7 +106,11 @@ public class IconSelectionPreference extends DialogPreference implements
         new IconSetDescriptor("gnw", R.string.weather_icons_gnw,
                 R.drawable.weather_gnw_28),
         new IconSetDescriptor("gs6", R.string.weather_icons_gs6,
-                R.drawable.weather_gs6_28)
+                R.drawable.weather_gs6_28),
+        new IconSetDescriptor("weezle", R.string.weather_icons_weezle,
+                R.drawable.weather_weezle_28),
+        new IconSetDescriptor("marshmallow", R.string.weather_icons_marshmallow,
+                R.drawable.weather_marshmallow_28)
     };
 
     private static final IntentFilter PACKAGE_CHANGE_FILTER = new IntentFilter();
