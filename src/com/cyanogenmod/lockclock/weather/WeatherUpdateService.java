@@ -212,6 +212,7 @@ public class WeatherUpdateService extends Service {
             int result = GooglePlayServicesUtil.isGooglePlayServicesAvailable(mContext);
             return result == ConnectionResult.SUCCESS
                     || result == ConnectionResult.SERVICE_VERSION_UPDATE_REQUIRED;
+        }
 
         private void onWeatherRequestCompleted(WeatherInfo result) {
             if (D) Log.d(TAG, "Weather update received, caching data and updating widget");
