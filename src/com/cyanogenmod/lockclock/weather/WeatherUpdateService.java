@@ -214,19 +214,6 @@ public class WeatherUpdateService extends Service {
                     || result == ConnectionResult.SERVICE_VERSION_UPDATE_REQUIRED;
         }
 
-        private void onWeatherRequestCompleted(WeatherInfo result) {
-            if (D) Log.d(TAG, "Weather update received, caching data and updating widget");
-            cancelTimeoutAlarm();
-            long now = SystemClock.elapsedRealtime();
-            Preferences.setCachedWeatherInfo(mContext, now, result);
-            Preferences.setLastWeatherUpdateTimestamp(mContext, now);
-            scheduleUpdate(mContext, Preferences.weatherRefreshIntervalInMs(mContext), false);
-
-            Intent updateIntent = new Intent(mContext, ClockWidgetProvider.class);
-            mContext.sendBroadcast(updateIntent);
-            broadcastAndCleanUp(false);
-        }
-
         @Override
         protected WeatherInfo doInBackground(Void... params) {
             WeatherProvider provider = Preferences.weatherProvider(mContext);
