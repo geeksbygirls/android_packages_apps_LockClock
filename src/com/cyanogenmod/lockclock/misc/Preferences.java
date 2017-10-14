@@ -222,10 +222,6 @@ public class Preferences {
         return getPrefs(context).getLong(Constants.WEATHER_LAST_UPDATE, 0);
     }
 
-    public static void setLastWeatherUpdateTimestamp(Context context, long timestamp) {
-        getPrefs(context).edit().putLong(Constants.WEATHER_LAST_UPDATE, timestamp).apply();
-    }
-
     public static WeatherInfo getCachedWeatherInfo(Context context) {
         return WeatherInfo.fromSerializedString(context,
                 getPrefs(context).getString(Constants.WEATHER_DATA, null));
