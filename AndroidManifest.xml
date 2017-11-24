@@ -16,7 +16,7 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cyanogenmod.lockclock"
-    android:versionCode="22"
+    android:versionCode="25"
     android:versionName="3.5" >
 
     <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="24" />
@@ -43,9 +43,6 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Main"
         android:name=".WidgetApplication" >
-
-        <meta-data android:name="com.google.android.gms.version"
-                   android:value="@integer/google_play_services_version" />
 
         <activity
             android:name=".preference.Preferences"
